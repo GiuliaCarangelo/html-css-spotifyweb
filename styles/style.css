@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.caps-text{
+    text-transform: uppercase;
+}
 
 .flex-container{
     display: flex;
@@ -24,6 +31,12 @@
 
 .cta-bar button{
     all: unset;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: .2rem 2.2rem;
+    margin: auto .5rem;
+    height: 32px;
+    color: white;
 }
 
 header{
@@ -38,7 +51,6 @@ header{
     flex-direction: column;
     z-index: 3;
 }
-
 
 main{
     background-color: #141922;
