@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+
+.flex-container{
+    display: flex;
+}
+
 .cta-bar{
     display: flex;
     justify-content: right;
@@ -34,16 +39,6 @@ header{
     z-index: 3;
 }
 
-.taskbar{
-    width: 100vw;
-    height: 90px;
-    background-color: #282828;
-    z-index: 4;
-    position: fixed;
-    display: flex;
-    align-items: flex-end;
-
-}
 
 main{
     background-color: #141922;
@@ -53,8 +48,13 @@ main{
     width: 100vw;
 }
 
-.flex-container{
+.taskbar{
+    width: 100vw;
+    height: 90px;
+    background-color: #282828;
     display: flex;
     align-content: flex-end;
+    z-index: 5;
+    position: fixed;
+    bottom: 0;
 }
-
