@@ -98,7 +98,10 @@ footer{
 .lg-icons{
     list-style-type: none;
     display: none;
+    width: auto;
 }
+
+/* DARE PADDING AGLI LI NON ALL'UL!! */
 
 #spotify-icon-lg{
     width: 130px;
@@ -109,6 +112,7 @@ ul li{
     font-weight: 600;
     display: flex;
     align-items: center;
+    padding-left: 1rem;
 }
 
 .lg-icons li{
@@ -121,7 +125,6 @@ ul li{
 .lg-icons li img{
     color: #a2a2a2;
     width: 2rem;
-    padding-right: .5rem;
 }
 
 .lg-icons *:not(:first-child):hover{
