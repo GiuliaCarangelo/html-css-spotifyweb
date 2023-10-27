@@ -16,15 +16,17 @@ body{
 }
 
 .wrapper{
-    width: 50px;
-    height: 100vh;
-}
-
-#sidebar{
-    position: fixed;
+    display: flex;
+    flex-direction: column;
     width: 50px;
     height: 100vh;
     background-color: black;
+}
+
+#sidebar-top{
+    position: fixed;
+    width: 50px;
+    height: 100vh;
 }
 
 main{
@@ -48,6 +50,9 @@ footer{
 }
 
 .call-to-action{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background-color: #080b12;
     position: fixed;
     top: 0;
@@ -56,6 +61,107 @@ footer{
     width: calc(100vw - 50px);
 }
 
-@media screen and (min-width: 576px){
+#upgrade-btn{
+    font-size: .8rem;
+    margin-right: 1rem;
+    color: white;
+    border: 1px solid white;
+    padding: .8rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+}
 
+.small-icons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#spotify-icon{
+    width: 2rem;
+    color: white;
+}
+
+.small-icons li img{
+    width: 1.6rem;
+    padding-top: .3rem;
+    padding-bottom: .1rem;
+    color: #75747d;
+}
+
+#sidebar-bottom{
+    display: flex;
+    align-items: flex-end;
+}
+
+.lg-icons{
+    list-style-type: none;
+    display: none;
+}
+
+#spotify-icon-lg{
+    width: 130px;
+    padding: .8rem 0;
+}
+
+ul li{    
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.lg-icons li{
+    color: #a2a2a2;
+    font-size: .8rem;
+    padding: .3rem 0;
+    border-left: 5px solid transparent;
+}
+
+.lg-icons li img{
+    color: #a2a2a2;
+    width: 2rem;
+    padding-right: .5rem;
+}
+
+.lg-icons *:not(:first-child):hover{
+    color: white;
+}
+
+
+.lg-icons *:not(:first-child):active{
+    color: white;
+    border-left: 5px solid #adff2f;
+}
+
+.lg-icons li:hover{
+    color: white;
+}
+
+.caps-text{
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 758px){
+    .wrapper{
+        width: 250px;
+        padding-left: 1rem;
+    }
+
+    main{
+        width: calc(100vw - 250px);
+    }
+
+    .call-to-action{
+        margin-left: 250px;
+        width: calc(100vw - 250px);
+    }
+
+    ul.small-icons{
+        display: none;
+    }
+
+    ul.lg-icons{
+        display: inline-block;
+    }
 }
