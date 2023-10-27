@@ -79,14 +79,16 @@ footer{
 }
 
 #spotify-icon{
-    width: 2rem;
+    width: 2.6rem;
     color: white;
 }
 
 .small-icons li img{
-    width: 1.6rem;
-    padding-top: .3rem;
+    display: flex;
+    width: 2.5rem;
+    padding-top: .6rem;
     padding-bottom: .1rem;
+    padding-right: 1rem;
     color: #75747d;
 }
 
@@ -109,7 +111,7 @@ footer{
 }
 
 ul li{    
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     padding-left: 1rem;
@@ -119,12 +121,13 @@ ul li{
     color: #a2a2a2;
     font-size: .8rem;
     padding: .3rem 0;
-    border-left: 5px solid transparent;
+    border-left: 3px solid transparent;
 }
 
 .lg-icons li img{
     color: #a2a2a2;
     width: 2rem;
+    padding-right: .3rem;
 }
 
 .lg-icons *:not(:first-child):hover{
@@ -134,7 +137,7 @@ ul li{
 
 .lg-icons *:not(:first-child):active{
     color: white;
-    border-left: 5px solid #adff2f;
+    border-left: 3px solid #adff2f;
 }
 
 .lg-icons li:hover{
@@ -167,4 +170,10 @@ ul li{
     ul.lg-icons{
         display: inline-block;
     }
+
+    #upgrade-btn:hover{
+        display: flex;
+        font-size: .9rem;
+    }
+    
 }
