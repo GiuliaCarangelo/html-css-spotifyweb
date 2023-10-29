@@ -15,26 +15,142 @@ body{
     display: flex;
 }
 
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 50px;
-    height: 100vh;
+header{
     background-color: black;
 }
 
-#sidebar-top{
-    position: fixed;
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50px;
-    height: 100vh;
+    height: 100%;
+}
+
+.wrapper h2{
+    font-size: .5rem;
+}
+
+#sidebar-top{
+    height: 100%;
+}
+
+#sidebar-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #75747d;
+    font-size: 1rem;
+    font-weight: 100;
+    padding-bottom: .8rem;
+}
+
+.download-icon{
+    width: .8rem;
+    padding-bottom: 0;
+    display: flex;
+}
+
+#sidebar-bottom h5{
+    display: none;
+    padding-left: .5rem;
+}
+
+.profile{
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: #75747d;
+    border-radius: 50%;
+}
+
+.login-section{
+    display: flex;
+    align-items: center;
+    padding: .2rem 0 .8rem;
+}
+
+.login-section h4{
+    display: none;
+    font-size: 1rem;
+    color: white;
+    padding-left: .8rem;
+}
+
+.playlists{
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    display: none;
+}
+
+.playlists h2{
+    padding-bottom: .8rem;
+    font-size: .9rem;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+}
+
+.playlists a{
+    all: unset;
+}
+
+/* a:hover{
+    .flex-container button{
+        background-color: white;
+    } 
+
+    .flex-container span{
+        color: white;
+    }
+} */
+
+.new-playlist{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #a3a3a3;
+    padding: .6rem .6rem;
+    width: 15px;
+    height: 15px;
+    font-size: 1.3rem;
+}
+
+#pl-list li:hover{
+    color: white;
+}
+
+.flex-container span{
+    color: #a3a3a3;
+    padding-left: .8rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.playlists ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    color: white;
+    margin-top: .5rem;
+}
+
+.playlists ul li{
+    color: #75747d;
+    padding: .6rem 0;
 }
 
 main{
     overflow: scroll;
     background-color: #141922;
     width: calc(100vw - 50px);
-    height: calc(100vh - 180px);
-    margin-top: 100px;
+    height: calc(100vh - 160px);
+    margin-top: 80px;
 }
 
 footer{
@@ -42,12 +158,44 @@ footer{
 }
 
 #taskbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .8rem;
     position: fixed;
     bottom: 0;
     background-color: #282828;
     height: 80px;
-    width: 100vw;
     z-index: 2;
+    width: 100%;
+}
+
+.player-container{
+    display: flex;
+    width: calc((100vw / 3) - 1.6rem);
+    flex-direction: row;
+}
+
+#cover-miniature{
+    object-fit: cover;
+    width: 30%;
+    padding-right: .5rem;
+}
+
+.song-info{
+    font-size: .6rem;
+    display: flex;   
+}
+
+.song-info h4{
+    width: 80%;
+    font-weight: 700;
+    color: #75747d;
+}
+
+.fav-folder-icon{
+    display: flex;
+    align-items: column;
 }
 
 .call-to-action{
@@ -58,7 +206,7 @@ footer{
     position: fixed;
     top: 0;
     margin-left: 50px;
-    height: 100px;
+    height: 80px;
     width: calc(100vw - 50px);
 }
 
@@ -80,22 +228,17 @@ footer{
 }
 
 #spotify-icon{
-    width: 2.6rem;
+    width: 1.8rem;
     color: white;
 }
 
 .small-icons li img{
     display: flex;
-    width: 2.5rem;
+    align-items: center;
+    width: 1.5rem;
     padding-top: .6rem;
     padding-bottom: .1rem;
-    padding-right: 1rem;
     color: #75747d;
-}
-
-#sidebar-bottom{
-    display: flex;
-    align-items: flex-end;
 }
 
 .lg-icons{
@@ -104,12 +247,13 @@ footer{
     width: auto;
 }
 
-/* DARE PADDING AGLI LI NON ALL'UL!! */
-
 #spotify-icon-lg{
+    color: white;
     width: 130px;
     padding: .8rem 0;
 }
+
+/* CAMBIARE COLORE LOGO SPOTIFY */
 
 ul li{    
     font-weight: 600;
@@ -127,30 +271,29 @@ ul li{
 }
 
 .lg-icons li img{
-    color: #a2a2a2;
+    filter: brightness(50%);
     width: 2rem;
     padding-right: .3rem;
 }
 
-.lg-icons *:not(:first-child):hover{
-    color: white;
+.lg-icons a{
+    all: unset;
 }
 
+.lg-icons li img, .lg-icons *:not(:first-child):hover{
+    color: white;
+}
 
 .lg-icons *:not(:first-child):active{
     color: white;
     border-left: 3px solid #adff2f;
 }
 
-.lg-icons li:hover{
-    color: white;
+ul.lg-icons img.menu-icons a:hover{
+    fill: white;
 }
 
-#sidebar-bottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
+/* CORREGGERE COLORE DEGLI SVG DELLA LISTA ^^^ */
 
 .main-nav{
     display: flex;
@@ -158,7 +301,7 @@ ul li{
     justify-content: center;
     font-weight: 600;
     font-size: .9rem;
-    padding-top: .2rem;
+    padding: .2rem;
     width: 100%;
 }
 
@@ -172,16 +315,7 @@ ul li{
     border-bottom: 3px solid #adff2f;
 }
 
-/* .main-nav li:hover::after{
-    display: block;
-    content: "";
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-bottom: 20px solid red; 
-} */
-
-/* FIXARE HOVER BORDER */
+/* FIXARE HOVER BORDER ^^^ */
 
 .main-container{
     padding: 1rem 1.5rem;
@@ -197,31 +331,32 @@ ul li{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: .5rem;
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: calc((100% / 2) - .8rem);
     padding: .2rem .4rem;
-    flex-wrap: wrap;
 }
 
 .inner-container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: .6rem;
-    width: 100%;
+    width: 80%;
 }
 
 .inner-container h3{
-    font-size: .9rem;
+    font-size: 1rem;
+    padding: 1.2rem 0 .4rem;
 }
 
 .inner-container span{
     color: #75747d;
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 700;
-    padding-top: .5rem;
+    padding-top: .4rem;
 }
 
 .card img{
@@ -240,19 +375,28 @@ ul li{
     color: #a2a2a2;
 }
 
-@media screen and (min-width: 758px){
+.bold-title{
+    font-weight: 700;
+}
+
+@media screen and (min-width: 576px){
     .wrapper{
-        width: 250px;
+        width: 220px;
         padding-left: 1rem;
     }
 
+    .playlists{
+        display: block;
+    }
+
+
     main{
-        width: calc(100vw - 250px);
+        width: calc(100vw - 200px);
     }
 
     .call-to-action{
-        margin-left: 250px;
-        width: calc(100vw - 250px);
+        margin-left: 220px;
+        width: calc(100vw - 220px);
     }
 
     ul.small-icons{
@@ -267,5 +411,5 @@ ul li{
         display: flex;
         font-size: .9rem;
     }
-    
+
 }

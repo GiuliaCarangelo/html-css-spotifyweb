@@ -17,56 +17,92 @@
 <body>
     <div class="container">
             <!-- HEADER (top, bottom) -->
-            <header class="wrapper">
-                <div id="sidebar-top">
-                    <ul class="small-icons">
-                        <li>
-                            <img id="spotify-icon" src="./img/logo-small.svg" alt="small Spotify logo">
-                        </li>
-                        <li>
-                            <img src="./img/home.svg" alt="home Spotify icon">
-                        </li>
-                        <li>
-                            <img src="./img/search.svg" alt="search Spotify icon">
-                        </li>
-                        <li>
-                            <img src="./img/libreria.svg" alt="library Spotify icon">
-                        </li>
-                    </ul>
-                    <ul class="lg-icons">
-                        <li>
-                            <img id="spotify-icon-lg" src="./img/logo.svg" alt="Spotify Logo">
-                        </li>
-                        <li>
-                            <img src="./img/home.svg" alt="library large icon">
-                            Home
-                        </li>
-                        <li>
-                            <img src="./img/search.svg" alt="search large icon">
-                            Cerca
-                        </li>
-                        <li>
-                            <img src="./img/libreria.svg" alt="library large icon">
-                            La tua libreria</li>
-                    </ul>
-                </div>
-                <div id="sidebar-bottom">
-                    <!-- completare bottom sidebar -->
-                    <h2 class="caps-text white-text"></h2>
-                </div>
+            <header>
+                <div class="wrapper">
+                    <div id="sidebar-top">
+                            <ul class="small-icons">
+                                <li>
+                                    <img id="spotify-icon" src="./img/logo-small.svg" alt="small Spotify logo">
+                                </li>
+                                <li>
+                                    <img src="./img/home.svg" alt="home Spotify icon">
+                                </li>
+                                <li>
+                                    <img src="./img/search.svg" alt="search Spotify icon">
+                                </li>
+                                <li>
+                                    <img src="./img/libreria.svg" alt="library Spotify icon">
+                                </li>
+                            </ul>
+                            <ul class="lg-icons">
+                                <a href="#">
+                                    <li>
+                                        <img id="spotify-icon-lg" src="./img/logo.svg" alt="Spotify Logo">
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <img class="menu-icons" src="./img/home.svg" alt="library large icon">
+                                        <h3>Home</h3>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <img class="menu-icons" src="./img/search.svg" alt="search large icon">
+                                        <h3>Cerca</h3>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <img src="./img/libreria.svg" class="men" alt="library large icon">
+                                        <h3>La tua libreria</h3>
+                                    </li>
+                                </a>
+                            </ul>
+                            <div class="playlists">
+                            <h2 class="caps-text white-text">
+                                playlist
+                            </h2>
+                            <a href="#">
+                                <div class="flex-container">
+                                    <button class="new-playlist">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                    <span>Crea Playlist</span>
+                                </div>
+                            </a>
+                            <ul id="pl-list">
+                                <li>New Playlist</li>
+                                <li>New Playlist</li>
+                                <li>New Playlist</li>
+                                <li>New Playlist</li>
+                                <li>New Playlist</li>
+                                <li>New Playlist</li>
+                                <li>New Playlist</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="sidebar-bottom">
+                        <img class="download-icon" src="./img/download.svg" alt="download icon">
+                        <h5>Installa app</h5>
+                    </div>
+                    <div class="login-section">
+                        <img class="profile" src="./img/profile.svg" alt="avatar profile picture">
+                        <h4>John Doe</h4>
+                    </div>
             </header>
 
             <!-- MAIN -->
             <main>
                 <ul class="main-nav grey-text">
                     <div class="small-border">
-                    <li class="caps-text">in evidenza</li>
+                        <li class="caps-text">in evidenza</li>
                     </div>
-                    <li class="caps-text">podcast</li>
-                    <li class="caps-text">classifiche</li>
-                    <li class="caps-text">generi e mood</li>
-                    <li class="caps-text">nuove uscite</li>
-                    <li class="caps-text">scopri</li>
+                        <li class="caps-text">podcast</li>
+                        <li class="caps-text">classifiche</li>
+                        <li class="caps-text">generi e mood</li>
+                        <li class="caps-text">nuove uscite</li>
+                        <li class="caps-text">scopri</li>
                 </ul>
                 <div class="main-container">
                     <h1>Recently Played</h1>
@@ -122,8 +158,32 @@
 
 
             </main>
-            <footer id="taskbar">
 
+            <!-- FOOTER -->
+            <footer id="taskbar">
+                <div class="player-container">
+                    <section class="song-info">
+                            <img id="cover-miniature" src="./img/sinister.jpeg" alt="Sinister cover pic">
+                            <div>
+                                <h3 class="bold-title white-text">Sinister</h3>
+                                <h4>Brano Nome</h4>
+                                <div class="fav-folder-icons">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-folder"></i>
+                                </div>
+                            </div>
+                    </section>
+                    <section>
+                        <div></div>
+                        <div></div>
+                    </section>
+                    <section>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <div></div>
+                    </section>
+                </div>
             </footer>
     </div>
     <div class="call-to-action caps-text">
