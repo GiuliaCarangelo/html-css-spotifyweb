@@ -89,7 +89,7 @@ header{
     font-size: .9rem;
 }
 
-.flex-container{
+.flex-container-c{
     display: flex;
     align-items: center;
 }
@@ -170,6 +170,12 @@ footer{
     width: 100%;
 }
 
+.taskbar-container{
+    display: flex;
+    width: calc((100vw / 3) - 1.6rem);
+    flex-direction: row;
+}
+
 .player-container{
     display: flex;
     width: calc((100vw / 3) - 1.6rem);
@@ -178,13 +184,17 @@ footer{
 
 #cover-miniature{
     object-fit: cover;
-    width: 30%;
-    padding-right: .5rem;
+    width: 100%;
+    padding: .5rem .5rem;
+}
+
+#taskbar :nth-child(2){
+    flex-direction: column;
 }
 
 .song-info{
     font-size: .6rem;
-    display: flex;   
+    display: flex;
 }
 
 .song-info h4{
@@ -193,9 +203,9 @@ footer{
     color: #75747d;
 }
 
-.fav-folder-icon{
+.song-info *{
     display: flex;
-    align-items: column;
+    flex-direction: column;
 }
 
 .call-to-action{
@@ -377,6 +387,10 @@ ul.lg-icons img.menu-icons a:hover{
 
 .bold-title{
     font-weight: 700;
+}
+
+.flex-container{
+    display: flex;
 }
 
 @media screen and (min-width: 576px){
